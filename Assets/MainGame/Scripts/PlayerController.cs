@@ -51,10 +51,4 @@ public class PlayerControler : MonoBehaviour
 
     }
 
-    private void OnJump(InputValue inputValue)
-    {
-        // 그라운드 만들고 리지드 바디 넣어야함
-        // 점프하는 애니메이션 출력하기
-    }
-
 }
