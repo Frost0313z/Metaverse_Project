@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform target;
+    private Vector3 initDistance;
+    public Vector2 minBounds;
+    public Vector2 maxBounds;
+
     void Start()
     {
-        
+        initDistance = transform.position - target.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Vector3 TracePosition = target.position + initDistance;   
+
+        TracePosition.x = Mathf.Clamp(TracePosition.x, minBounds.x, maxBounds.x);
+        TracePosition.y = Mathf.Clamp(TracePosition.y, minBounds.y, maxBounds.y);
+
+        transform.position = TracePosition;
     }
 }
