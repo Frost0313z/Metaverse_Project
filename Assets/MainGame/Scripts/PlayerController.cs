@@ -12,10 +12,12 @@ public class PlayerControler : MonoBehaviour
     [SerializeField] private SpriteRenderer characterRenderer;
     private Vector2 knockback = Vector2.zero;
     [SerializeField] private float characterMoveSpeed = 1f;
+    private Animator animator;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void OnMove(InputValue inputValue)
@@ -23,12 +25,20 @@ public class PlayerControler : MonoBehaviour
         Vector2 direction = inputValue.Get<Vector2>().normalized;
         direction = direction * characterMoveSpeed;
 
-        if(direction.x != 0) // 플립
+        if(direction.x != 0 || direction.y != 0)
         {
-            if(direction.x < 0)
-            characterRenderer.flipX = true;
-            else
-            characterRenderer.flipX = false;
+            animator.SetBool("IsMove", true);
+            if(direction.x != 0) // 플립
+            {
+                if(direction.x < 0)
+                characterRenderer.flipX = true;
+                else
+                characterRenderer.flipX = false;
+            }
+        }
+        else
+        {
+            animator.SetBool("IsMove",false);
         }
 
         _rigidbody.velocity = direction;
