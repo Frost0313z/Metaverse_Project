@@ -2110,8 +2110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e60f6446e627d4d88cc31f38854136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  restartText: {fileID: 0}
+  scoreText: {fileID: 2819120984397538712}
+  restartText: {fileID: 5227647263998222339}
 --- !u!61 &3641465583632823636
 BoxCollider2D:
   m_ObjectHideFlags: 0
