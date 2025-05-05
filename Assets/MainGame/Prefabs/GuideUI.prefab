@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5398580952394336499}
   - component: {fileID: 8979423300294679221}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: GuideUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
