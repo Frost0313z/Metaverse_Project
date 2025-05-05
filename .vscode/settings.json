@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Metaverse_Project.sln"
+    "dotnet.defaultSolution": "Metaverse_Project1.sln"
 }
