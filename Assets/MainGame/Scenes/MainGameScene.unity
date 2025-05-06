@@ -898,10 +898,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 179190156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6097038a07f13ca49bb6043150389f31, type: 3}
+  m_Script: {fileID: 11500000, guid: a72645bcea7b9c44f918e63116f3d03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideUI: {fileID: 0}
 --- !u!1 &187043986
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,10 +2681,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 240470425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6097038a07f13ca49bb6043150389f31, type: 3}
+  m_Script: {fileID: 11500000, guid: a72645bcea7b9c44f918e63116f3d03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideUI: {fileID: 0}
 --- !u!1 &241595047
 GameObject:
   m_ObjectHideFlags: 0
@@ -11987,7 +11985,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 699509138}
-  - component: {fileID: 699509139}
   m_Layer: 5
   m_Name: Guide_Stack
   m_TagString: Untagged
@@ -12017,19 +12014,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &699509139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699509137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8d3129e1932ba34ea3791779bdcd1fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 1476527953}
 --- !u!1 &712931371
 GameObject:
   m_ObjectHideFlags: 0
@@ -13795,10 +13779,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1007290588}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6097038a07f13ca49bb6043150389f31, type: 3}
+  m_Script: {fileID: 11500000, guid: a72645bcea7b9c44f918e63116f3d03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideUI: {fileID: 0}
 --- !u!1001 &1028320690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14746,10 +14729,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1160236145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6097038a07f13ca49bb6043150389f31, type: 3}
+  m_Script: {fileID: 11500000, guid: a72645bcea7b9c44f918e63116f3d03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideUI: {fileID: 0}
 --- !u!1 &1197546682
 GameObject:
   m_ObjectHideFlags: 0
@@ -15602,10 +15584,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1273028303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6097038a07f13ca49bb6043150389f31, type: 3}
+  m_Script: {fileID: 11500000, guid: a72645bcea7b9c44f918e63116f3d03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideUI: {fileID: 0}
 --- !u!1 &1301594640
 GameObject:
   m_ObjectHideFlags: 0
@@ -16300,10 +16281,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1362683836}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6097038a07f13ca49bb6043150389f31, type: 3}
+  m_Script: {fileID: 11500000, guid: a72645bcea7b9c44f918e63116f3d03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideUI: {fileID: 0}
 --- !u!1 &1387154677
 GameObject:
   m_ObjectHideFlags: 0
@@ -22069,7 +22049,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1867101501}
-  - component: {fileID: 1867101502}
   m_Layer: 5
   m_Name: Guide_Flappy
   m_TagString: Untagged
@@ -22099,19 +22078,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1867101502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867101500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8d3129e1932ba34ea3791779bdcd1fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 1590161314}
 --- !u!1 &1871330441
 GameObject:
   m_ObjectHideFlags: 0
@@ -22950,10 +22916,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1999091183}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6097038a07f13ca49bb6043150389f31, type: 3}
+  m_Script: {fileID: 11500000, guid: a72645bcea7b9c44f918e63116f3d03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideUI: {fileID: 0}
 --- !u!1 &2011685061
 GameObject:
   m_ObjectHideFlags: 0
@@ -22963,7 +22928,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011685062}
-  - component: {fileID: 2011685063}
   m_Layer: 5
   m_Name: Guide_TopDown
   m_TagString: Untagged
@@ -22993,19 +22957,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2011685063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011685061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8d3129e1932ba34ea3791779bdcd1fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 32018313}
 --- !u!1 &2032716316
 GameObject:
   m_ObjectHideFlags: 0
@@ -23258,10 +23209,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2041628336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6097038a07f13ca49bb6043150389f31, type: 3}
+  m_Script: {fileID: 11500000, guid: a72645bcea7b9c44f918e63116f3d03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideUI: {fileID: 0}
 --- !u!1 &2046207579
 GameObject:
   m_ObjectHideFlags: 0
@@ -29368,10 +29318,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2082102344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6097038a07f13ca49bb6043150389f31, type: 3}
+  m_Script: {fileID: 11500000, guid: a72645bcea7b9c44f918e63116f3d03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideUI: {fileID: 0}
 --- !u!1 &2086957171
 GameObject:
   m_ObjectHideFlags: 0
@@ -29744,10 +29693,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 131637250446247525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6097038a07f13ca49bb6043150389f31, type: 3}
+  m_Script: {fileID: 11500000, guid: a72645bcea7b9c44f918e63116f3d03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideUI: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
