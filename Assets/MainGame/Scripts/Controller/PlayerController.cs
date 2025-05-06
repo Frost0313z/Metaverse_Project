@@ -15,9 +15,9 @@ public class PlayerControler : MonoBehaviour
     [SerializeField] private float characterMoveSpeed = 1f;
     private Animator animator;
     private GameObject currentInteractable;
-    [SerializeField] private GameObject GuideUI_Flappy;
-    [SerializeField] private GameObject GuideUI_Stack;
-    [SerializeField] private GameObject GuideUI_TopDown;
+    [SerializeField] private GameObject EnterUI_Flappy;
+    [SerializeField] private GameObject EnterUI_Stack;
+    [SerializeField] private GameObject EnterUI_TopDown;
 
     private void Awake()
     {
@@ -81,17 +81,17 @@ public class PlayerControler : MonoBehaviour
         // 미니게임 트리거 오브젝트 인식
         if (tag == "Trigger_Flappy")
         {
-            GuideUI_Flappy.SetActive(true);
+            EnterUI_Flappy.SetActive(true);
         }
 
         if (tag == "Trigger_Stack")
         {
-            GuideUI_Stack.SetActive(true);
+            EnterUI_Stack.SetActive(true);
         }
 
         if (tag == "Trigger_TopDown")
         {
-            GuideUI_TopDown.SetActive(true);
+            EnterUI_TopDown.SetActive(true);
         }
     }
 
