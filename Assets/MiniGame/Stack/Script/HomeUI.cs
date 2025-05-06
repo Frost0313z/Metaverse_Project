@@ -4,35 +4,38 @@ using UnityEngine;
 
 using UnityEngine.UI;
 
-public class HomeUI : BaseUI
+namespace MiniGame.Stack
 {
-    Button startButton;
-    Button exitButton;
-    
-    protected override UIState GetUIState()
+    public class HomeUI : BaseUI
     {
-        return UIState.Home;
-    }
-    
-    public override void Init(UIManager_Stack uiManager)
-    {
-        base.Init(uiManager);
-        
-        startButton = transform.Find("StartButton").GetComponent<Button>();
-        exitButton = transform.Find("ExitButton").GetComponent<Button>();
-        
-        startButton.onClick.AddListener(OnClickStartButton);
-        exitButton.onClick.AddListener(OnClickExitButton);
-    }
+        Button startButton;
+        Button exitButton;
 
-    void OnClickStartButton()
-    {
-        uIManager.OnClickStart();
-    }
+        protected override UIState GetUIState()
+        {
+            return UIState.Home;
+        }
 
-    void OnClickExitButton()
-    {
-        uIManager.OnClickExit();
+        public override void Init(UIManager_Stack uiManager)
+        {
+            base.Init(uiManager);
+
+            startButton = transform.Find("StartButton").GetComponent<Button>();
+            exitButton = transform.Find("ExitButton").GetComponent<Button>();
+
+            startButton.onClick.AddListener(OnClickStartButton);
+            exitButton.onClick.AddListener(OnClickExitButton);
+        }
+
+        void OnClickStartButton()
+        {
+            uIManager.OnClickStart();
+        }
+
+        void OnClickExitButton()
+        {
+            uIManager.OnClickExit();
+        }
     }
 }
 

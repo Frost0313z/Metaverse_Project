@@ -3,33 +3,36 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class GameUI : BaseUI
+namespace MiniGame.Stack
 {
-    TextMeshProUGUI scoreText;
-    TextMeshProUGUI comboText;
-    TextMeshProUGUI maxComboText;
-
-    protected override UIState GetUIState()
+    public class GameUI : BaseUI
     {
-        return UIState.Game;
-    }
+        TextMeshProUGUI scoreText;
+        TextMeshProUGUI comboText;
+        TextMeshProUGUI maxComboText;
 
-    public override void Init(UIManager_Stack uiManager)
-    {
-        base.Init(uiManager);
+        protected override UIState GetUIState()
+        {
+            return UIState.Game;
+        }
 
-        scoreText = transform.Find("ScoreText").GetComponent<TextMeshProUGUI>();
-        comboText = transform.Find("ComboText").GetComponent<TextMeshProUGUI>();
-        maxComboText = transform.Find("MaxComboText").GetComponent<TextMeshProUGUI>();
-    }
+        public override void Init(UIManager_Stack uiManager)
+        {
+            base.Init(uiManager);
 
-    public void SetUI(int score, int combo, int maxCombo)
-    {
-        scoreText.text = score.ToString();
-        comboText.text = combo.ToString();
-        maxComboText.text = maxCombo.ToString();
+            scoreText = transform.Find("ScoreText").GetComponent<TextMeshProUGUI>();
+            comboText = transform.Find("ComboText").GetComponent<TextMeshProUGUI>();
+            maxComboText = transform.Find("MaxComboText").GetComponent<TextMeshProUGUI>();
+        }
+
+        public void SetUI(int score, int combo, int maxCombo)
+        {
+            scoreText.text = score.ToString();
+            comboText.text = combo.ToString();
+            maxComboText.text = maxCombo.ToString();
+        }
+
     }
-    
 }
 
 

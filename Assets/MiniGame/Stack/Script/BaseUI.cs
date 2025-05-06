@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEditor.Timeline;
 using UnityEngine;
 
-public abstract class BaseUI : MonoBehaviour
+namespace MiniGame.Stack
 {
-    protected UIManager_Stack uIManager;
-
-    public virtual void Init(UIManager_Stack uIManager)
+    public abstract class BaseUI : MonoBehaviour
     {
-        this.uIManager = uIManager;
-    }
+        protected UIManager_Stack uIManager;
 
-    protected abstract UIState GetUIState();
-    public void SetActive(UIState state)
-    {
-        gameObject.SetActive(GetUIState() == state);
+        public virtual void Init(UIManager_Stack uIManager)
+        {
+            this.uIManager = uIManager;
+        }
+
+        protected abstract UIState GetUIState();
+        public void SetActive(UIState state)
+        {
+            gameObject.SetActive(GetUIState() == state);
+        }
     }
 }

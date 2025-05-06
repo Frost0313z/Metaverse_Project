@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - BackGround
-  - GuideUI
+  - Minigame_trigger
+  - NPC
+  - Monster
   layers:
   - Default
   - TransparentFX

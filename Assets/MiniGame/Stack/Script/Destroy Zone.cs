@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyZone : MonoBehaviour
+namespace MiniGame.Stack
 {
-    void OnCollisionEnter(Collision collision)
+    public class DestroyZone : MonoBehaviour
     {
-        if(collision.gameObject.name.Equals("Rubble"))
+        void OnCollisionEnter(Collision collision)
         {
-            Destroy(collision.gameObject);
+            if (collision.gameObject.name.Equals("Rubble"))
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
 }

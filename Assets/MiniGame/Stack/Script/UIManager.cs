@@ -3,79 +3,79 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-
-public enum UIState
+namespace MiniGame.Stack
 {
-    Home,
-    Game,
-    Score
-}
-
-public class UIManager_Stack : MonoBehaviour
-{
-    static UIManager_Stack instance;
-    public static UIManager_Stack Instance
+    public enum UIState
     {
-        get {return instance;}
+        Home,
+        Game,
+        Score
     }
 
-    UIState currentState = UIState.Home;
-    HomeUI homeUI = null;
-    GameUI gameUI = null;
-    ScoreUI scoreUI = null;
-
-    TheStack theStack = null;
-
-    private void Awake()
+    public class UIManager_Stack : MonoBehaviour
     {
-        instance = this;
-        theStack = FindObjectOfType<TheStack>();
-        homeUI = GetComponentInChildren<HomeUI>(true);
-        homeUI?.Init(this);
+        static UIManager_Stack instance;
+        public static UIManager_Stack Instance
+        {
+            get { return instance; }
+        }
 
-        gameUI = GetComponentInChildren<GameUI>(true);
-        gameUI?.Init(this);
+        UIState currentState = UIState.Home;
+        HomeUI homeUI = null;
+        GameUI gameUI = null;
+        ScoreUI scoreUI = null;
 
-        scoreUI = GetComponentInChildren<ScoreUI>(true);
-        scoreUI?.Init(this);
+        TheStack theStack = null;
 
-        ChangeState(UIState.Home);
-    }
+        private void Awake()
+        {
+            instance = this;
+            theStack = FindObjectOfType<TheStack>();
+            homeUI = GetComponentInChildren<HomeUI>(true);
+            homeUI?.Init(this);
 
-    public void ChangeState(UIState state)
-    {
-        currentState = state;
-        homeUI?.SetActive(currentState);
-        gameUI?.SetActive(currentState);
-        scoreUI?.SetActive(currentState);
-    }
+            gameUI = GetComponentInChildren<GameUI>(true);
+            gameUI?.Init(this);
 
-    public void OnClickStart()
-    {
-        theStack.Restart();
-        ChangeState(UIState.Game);
-    }
+            scoreUI = GetComponentInChildren<ScoreUI>(true);
+            scoreUI?.Init(this);
 
-    public void OnClickExit()
-    {
-    #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-    #else
+            ChangeState(UIState.Home);
+        }
+
+        public void ChangeState(UIState state)
+        {
+            currentState = state;
+            homeUI?.SetActive(currentState);
+            gameUI?.SetActive(currentState);
+            scoreUI?.SetActive(currentState);
+        }
+
+        public void OnClickStart()
+        {
+            theStack.Restart();
+            ChangeState(UIState.Game);
+        }
+
+        public void OnClickExit()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
-    #endif
+#endif
+        }
+
+        public void UpdateScore()
+        {
+            gameUI.SetUI(theStack.Score, theStack.Combo, theStack.MaxCombo);
+        }
+
+        public void SetScoreUI()
+        {
+            scoreUI.SetUI(theStack.Score, theStack.MaxCombo, theStack.BestScore, theStack.BestCombo);
+
+            ChangeState(UIState.Score);
+        }
     }
-
-    public void UpdateScore()
-    {
-        gameUI.SetUI(theStack.Score, theStack.Combo, theStack.MaxCombo);
-    }
-
-    public void SetScoreUI()
-    {
-        scoreUI.SetUI(theStack.Score, theStack.MaxCombo, theStack.BestScore, theStack.BestCombo);
-    
-        ChangeState(UIState.Score);
-    }
-
-
 }
