@@ -48,7 +48,7 @@ public class PlayerControler : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) // 상호작용 물체를 인식하여 변수에 저장한다.
     {
         if (collision.CompareTag("NPC") ||
-        collision.CompareTag("MinigameTrigger") ||
+        collision.CompareTag("Minigame_trigger") ||
         collision.CompareTag("Monster"))
         {
             currentInteractable = collision.gameObject;
