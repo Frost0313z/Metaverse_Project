@@ -5,6 +5,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
 public class PlayerControler : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class PlayerControler : MonoBehaviour
     [SerializeField] private float characterMoveSpeed = 1f;
     private Animator animator;
     private GameObject currentInteractable;
+    [SerializeField] private GameObject GuideUI_Flappy;
+    [SerializeField] private GameObject GuideUI_Stack;
+    [SerializeField] private GameObject GuideUI_TopDown;
 
     private void Awake()
     {
@@ -48,7 +52,7 @@ public class PlayerControler : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) // 상호작용 물체를 인식하여 변수에 저장한다.
     {
         if (collision.CompareTag("NPC") ||
-        collision.CompareTag("Minigame_trigger") ||
+        collision.CompareTag("Trigger_Flappy") || collision.CompareTag("Trigger_Stack") || collision.CompareTag("Trigger_TopDown") ||
         collision.CompareTag("Monster"))
         {
             currentInteractable = collision.gameObject;
@@ -72,7 +76,23 @@ public class PlayerControler : MonoBehaviour
 
         if (tag == "NPC") { }
         if (tag == "Monster") { }
-        if (tag == "Minigame_trigger") { }
+        // 대화 UI 출력하기
+
+        // 미니게임 트리거 오브젝트 인식
+        if (tag == "Trigger_Flappy")
+        {
+            GuideUI_Flappy.SetActive(true);
+        }
+
+        if (tag == "Trigger_Stack")
+        {
+            GuideUI_Stack.SetActive(true);
+        }
+
+        if (tag == "Trigger_TopDown")
+        {
+            GuideUI_TopDown.SetActive(true);
+        }
     }
 
 }

@@ -8,6 +8,9 @@ TagManager:
   - Minigame_trigger
   - NPC
   - Monster
+  - Trigger_Flappy
+  - Trigger_Stack
+  - Trigger_TopDown
   layers:
   - Default
   - TransparentFX

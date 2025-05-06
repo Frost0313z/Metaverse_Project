@@ -11312,6 +11312,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterRenderer: {fileID: 153411172}
   characterMoveSpeed: 5
+  GuideUI_Flappy: {fileID: 1867101500}
+  GuideUI_Stack: {fileID: 699509137}
+  GuideUI_TopDown: {fileID: 2011685061}
 --- !u!50 &542246592
 Rigidbody2D:
   serializedVersion: 4
@@ -13138,11 +13141,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 263432058}
-  - {fileID: 56405532}
-  - {fileID: 276530175}
   - {fileID: 1517263700}
   - {fileID: 1206797892}
   - {fileID: 1387154678}
+  - {fileID: 56405532}
+  - {fileID: 276530175}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14333,7 +14336,7 @@ GameObject:
   - component: {fileID: 1007290593}
   m_Layer: 0
   m_Name: Trigger_Stack
-  m_TagString: Minigame_trigger
+  m_TagString: Trigger_Stack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14346,13 +14349,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007290588}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 17.51, y: -0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 968278799}
-  m_Father: {fileID: 1706091433}
+  m_Father: {fileID: 1333248436}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1007290590
 SpriteRenderer:
@@ -15707,8 +15710,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 272203898}
   - {fileID: 699509138}
+  - {fileID: 272203898}
   - {fileID: 1971604478}
   m_Father: {fileID: 819413374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16864,7 +16867,9 @@ Transform:
   m_Children:
   - {fileID: 1779697665}
   - {fileID: 931918627}
-  - {fileID: 1706091433}
+  - {fileID: 2041628337}
+  - {fileID: 1007290589}
+  - {fileID: 1999091184}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1360272143
@@ -17143,8 +17148,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1146962562}
   - {fileID: 2011685062}
+  - {fileID: 1146962562}
   - {fileID: 1204227435}
   m_Father: {fileID: 819413374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20760,8 +20765,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1704977509}
   - {fileID: 1867101501}
+  - {fileID: 1704977509}
   - {fileID: 1593302458}
   m_Father: {fileID: 819413374}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22010,40 +22015,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1706091432
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1706091433}
-  m_Layer: 0
-  m_Name: MiniGame_trigger
-  m_TagString: Minigame_trigger
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1706091433
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706091432}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2041628337}
-  - {fileID: 1007290589}
-  - {fileID: 1999091184}
-  m_Father: {fileID: 1333248436}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1717315440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23476,7 +23447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1971604478
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23755,7 +23726,7 @@ GameObject:
   - component: {fileID: 1999091188}
   m_Layer: 0
   m_Name: Trigger_Shooting
-  m_TagString: Minigame_trigger
+  m_TagString: Trigger_TopDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23768,13 +23739,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999091183}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.49, y: -14.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1593969492}
-  m_Father: {fileID: 1706091433}
+  m_Father: {fileID: 1333248436}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1999091185
 SpriteRenderer:
@@ -24062,8 +24033,8 @@ GameObject:
   - component: {fileID: 2041628340}
   - component: {fileID: 2041628341}
   m_Layer: 0
-  m_Name: Trigger_FlappyBird
-  m_TagString: Minigame_trigger
+  m_Name: Trigger_Flappy
+  m_TagString: Trigger_Flappy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24076,13 +24047,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041628336}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -18.51, y: -0.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 361106391}
-  m_Father: {fileID: 1706091433}
+  m_Father: {fileID: 1333248436}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2041628338
 SpriteRenderer:
