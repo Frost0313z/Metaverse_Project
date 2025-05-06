@@ -10,7 +10,7 @@ public class EnterUIHandler : MonoBehaviour
     [SerializeField] private Button yesButton;
     [SerializeField] private Button noButton;
 
-    void Start()
+    private void Start()
     {
         yesButton.onClick.AddListener(() =>
         {

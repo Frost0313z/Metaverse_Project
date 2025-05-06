@@ -2,30 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+namespace MiniGame.Flappy
 {
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI restartText;
-    // Start is called before the first frame update
-    void Start()
+    public class UIManager : MonoBehaviour
     {
-        if(restartText == null)
-        Debug.LogError("restart text is null");
 
-        if(scoreText == null)
-        Debug.LogError("score text is null");
+        public TextMeshProUGUI scoreText;
+        public Button restartButton;
+        public Button quitButton;
 
-        restartText.gameObject.SetActive(false);
-    }
+        void Start()
+        {
+            if (restartButton == null)
+                Debug.LogError("restart Button is null");
 
-    public void SetRestart()
-    {
-        restartText.gameObject.SetActive(true);
-    }
+            if (quitButton == null)
+                Debug.LogError("quit Button is null");
 
-    public void updatescore(int score)
-    {
-        scoreText.text = score.ToString();
+            if (scoreText == null)
+                Debug.LogError("score text is null");
+
+            restartButton.gameObject.SetActive(false);
+            quitButton.gameObject.SetActive(false);
+
+            restartButton.onClick.AddListener(SetRestart);
+            quitButton.onClick.AddListener(QuitGame);
+        }
+
+
+        public void SetRestart()
+        {
+            restartButton.gameObject.SetActive(true);
+            quitButton.gameObject.SetActive(true);
+        }
+
+        public void QuitGame()
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainGameScene");
+        }
+
+        public void updatescore(int score)
+        {
+            scoreText.text = score.ToString();
+        }
     }
 }

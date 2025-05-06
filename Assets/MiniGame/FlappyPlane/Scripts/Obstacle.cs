@@ -2,49 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+namespace MiniGame.Flappy
 {
-    public float highPosY = 1f;
-    public float lowPosY = -1f;
-
-    public float holeSizeMin = 1f;
-    public float holeSizeMax = 3f;
-
-    public Transform topObject;
-    public Transform bottomObject;
-
-    public float widthPadding = 4f;
-
-    GameManager gameManager;
-
-    private void Start()
+    public class Obstacle : MonoBehaviour
     {
-        gameManager = GameManager.Instance;
-    }
+        public float highPosY = 1f;
+        public float lowPosY = -1f;
 
-    public Vector3 SetRandomPlace(Vector3 lastPosition, int obstaclCount)
-    {
-        float holeSize = Random.Range(holeSizeMin, holeSizeMax);
-        float halfHoleSize = holeSize / 2;
+        public float holeSizeMin = 1f;
+        public float holeSizeMax = 3f;
 
-        topObject.localPosition = new Vector3(0, halfHoleSize); // 부모를 기준으로 이동하는 로컬 포지션션
-        bottomObject.localPosition = new Vector3(0, -halfHoleSize);
+        public Transform topObject;
+        public Transform bottomObject;
 
-        Vector3 placePosition = lastPosition + new Vector3(widthPadding, 0);
-        placePosition.y = Random.Range(lowPosY, highPosY);
+        public float widthPadding = 4f;
 
-        transform.position = placePosition;
+        GameManager gameManager;
 
-        return placePosition;
-
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Player player = collision.GetComponent<Player>();
-        if (player != null)
+        private void Start()
         {
-            gameManager.AddScore(1);
+            gameManager = GameManager.Instance;
+        }
+
+        public Vector3 SetRandomPlace(Vector3 lastPosition, int obstaclCount)
+        {
+            float holeSize = Random.Range(holeSizeMin, holeSizeMax);
+            float halfHoleSize = holeSize / 2;
+
+            topObject.localPosition = new Vector3(0, halfHoleSize); // 부모를 기준으로 이동하는 로컬 포지션션
+            bottomObject.localPosition = new Vector3(0, -halfHoleSize);
+
+            Vector3 placePosition = lastPosition + new Vector3(widthPadding, 0);
+            placePosition.y = Random.Range(lowPosY, highPosY);
+
+            transform.position = placePosition;
+
+            return placePosition;
+
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            Player player = collision.GetComponent<Player>();
+            if (player != null)
+            {
+                gameManager.AddScore(1);
+            }
         }
     }
 }

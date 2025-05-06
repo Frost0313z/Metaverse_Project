@@ -33,8 +33,7 @@ public class GameSceneManager : MonoBehaviour
     {
         CurrentMinigame = type;
 
-        string sceneName = type 
-        switch
+        string sceneName = type switch
         {
             MinigameType.Flappy => "FlappyScene",
             MinigameType.Stack => "StackScene",

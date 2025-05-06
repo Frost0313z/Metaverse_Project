@@ -3,42 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+namespace MiniGame.Flappy
 {
-    static GameManager gameManager; // 싱글톤 선언언
-    public static GameManager Instance {get{return gameManager;}}
-
-    private int currentScore = 0;
-
-    UIManager uIManager;
-    public UIManager UIManager {get { return uIManager; } }
-
-    private void Start()
+    public class GameManager : MonoBehaviour
     {
-        uIManager.updatescore(0);
-    }
+        [SerializeField] private UIManager uIManager;
+        [SerializeField] private UIManager startButton;
+        [SerializeField] private UIManager quitButton;
+        static GameManager gameManager; // 싱글톤 선언언
+        public static GameManager Instance { get { return gameManager; } }
 
-    private void Awake()
-    {
-        gameManager = this;
-        uIManager = FindObjectOfType<UIManager>();
-    }
+        private int currentScore = 0;
 
-    public void GameOver()
-    {
-        Debug.Log("Game Over");
-        uIManager.SetRestart();
-    }
+        private void Start()
+        {
+            uIManager.updatescore(0);
+        }
 
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+        private void Awake()
+        {
+            gameManager = this;
+            uIManager = FindObjectOfType<UIManager>();
+        }
 
-    public void AddScore(int score)
-    {
-        currentScore += score;
-        Debug.Log("Score: " + currentScore);
-        uIManager.updatescore(currentScore);
+        public void GameOver()
+        {
+            Debug.Log("Game Over");
+            uIManager.SetRestart();
+        }
+
+        public void RestartGame()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        public void AddScore(int score)
+        {
+            currentScore += score;
+            Debug.Log("Score: " + currentScore);
+            uIManager.updatescore(currentScore);
+        }
     }
 }
