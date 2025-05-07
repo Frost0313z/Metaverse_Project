@@ -8,8 +8,6 @@ namespace MiniGame.Flappy
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private UIManager uIManager;
-        [SerializeField] private UIManager startButton;
-        [SerializeField] private UIManager quitButton;
         static GameManager gameManager; // 싱글톤 선언언
         public static GameManager Instance { get { return gameManager; } }
 
@@ -29,6 +27,7 @@ namespace MiniGame.Flappy
         public void GameOver()
         {
             Debug.Log("Game Over");
+            ScoreManager.SaveScore(MinigameType.Flappy, currentScore);
             uIManager.SetRestart();
         }
 
@@ -41,7 +40,6 @@ namespace MiniGame.Flappy
         {
             currentScore += score;
             uIManager.updatescore(currentScore);
-            ScoreManager.SaveScore(MinigameType.Flappy,currentScore);
         }
     }
 }

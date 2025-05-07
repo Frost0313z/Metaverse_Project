@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class ScoreBoardManager : MonoBehaviour
 {
@@ -24,16 +23,7 @@ public class ScoreBoardManager : MonoBehaviour
     public static bool IsWin_Flappy = false;
     public static bool IsWin_Stack = false;
     public static bool IsWin_TopDown = false;
-    public Tilemap tilemap;
-    public TileBase closedGateTile_first;  // 기존 닫힌 문
-    public TileBase openGateTile_first;    // 열린 문
-    public Vector3Int gatePosition_first;  // 문 타일의 위치 (Cell 좌표)  
-    public TileBase closedGateTile_second;  // 기존 닫힌 문
-    public TileBase openGateTile_second;    // 열린 문
-    public Vector3Int gatePosition_second;  // 문 타일의 위치 (Cell 좌표)  
-    public TileBase closedGateTile_third;  // 기존 닫힌 문
-    public TileBase openGateTile_third;    // 열린 문
-    public Vector3Int gatePosition_third;  // 문 타일의 위치 (Cell 좌표)  
+
     void Start()
     {
         if (GameSceneManager.Instance != null)
@@ -92,7 +82,7 @@ public class ScoreBoardManager : MonoBehaviour
 
     }
 
-    private void CheckWinCondition(MinigameType type)
+    public void CheckWinCondition(MinigameType type)
     {
         switch (type)
         {
