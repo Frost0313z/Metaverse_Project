@@ -31,7 +31,7 @@ public class ScoreBoardHandler : MonoBehaviour
         bestScore_Flappy = ScoreManager.GetScore(MinigameType.Flappy);
         highScore_Flappy.text = ScoreManager.GetScore(MinigameType.Flappy).ToString();
 
-        if(bestScore_Flappy > 20)
+        if(bestScore_Flappy > 30)
         {
             // 첫번째 감옥 문 열림
         }

@@ -56,6 +56,22 @@ public class PlayerControler : MonoBehaviour
         collision.CompareTag("Monster"))
         {
             currentInteractable = collision.gameObject;
+
+            // 미니게임에서 복귀할 위치 미리 저장하기기
+
+            if (collision.CompareTag("Trigger_Flappy"))
+            {
+                PlayerPrefs.SetString("SpawnPointKey", "FlappyGateSpawn");
+            }
+            else if (collision.CompareTag("Trigger_Stack"))
+            {
+                PlayerPrefs.SetString("SpawnPointKey", "StackGateSpawn");
+            }
+            else if (collision.CompareTag("Trigger_TopDown"))
+            {
+                PlayerPrefs.SetString("SpawnPointKey", "TopDownGateSpawn");
+            }
+
         }
     }
 
