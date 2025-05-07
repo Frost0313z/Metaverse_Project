@@ -18,22 +18,13 @@ public class PrisonDoorController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log($"IsWin_Flappy: {IsWin_Flappy}, IsWin_Stack: {IsWin_Stack}, IsWin_TopDown: {IsWin_TopDown}");
-
-    Debug.Log($"Tilemap name: {tilemap.name}");
-
-    Debug.Log($"현재 위치 플래피 문: {tilemap.GetTile(gatePosition_first)?.name}");
-        // ScoreBoardManager.CheckWinCondition(MinigameType.Flappy);
-
         if (IsWin_Flappy)
         {
             tilemap.SetTile(gatePosition_first, openGateTile);
-            Debug.Log("Flappy 문 OPEN");
         }
         else
         {
             tilemap.SetTile(gatePosition_first, closedGateTile);
-            Debug.Log("Flappy 문 CLOSED");
         }
 
         if (IsWin_Stack)
@@ -53,7 +44,5 @@ public class PrisonDoorController : MonoBehaviour
         {
             tilemap.SetTile(gatePosition_third, closedGateTile);
         }
-
-        Debug.Log($"변경 후 Flappy 위치 타일: {tilemap.GetTile(gatePosition_first)?.name}");
     }
 }
