@@ -8,6 +8,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private Transform stackGateSpawn;
     [SerializeField] private Transform topDownGateSpawn;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject MainCamera;
 
     void Start()
     {
@@ -17,18 +18,20 @@ public class SpawnManager : MonoBehaviour
         {
             case "FlappyGateSpawn":
                 player.transform.position = flappyGateSpawn.position;
+
                 break;
             case "StackGateSpawn":
                 player.transform.position = stackGateSpawn.position;
+                
                 break;
             case "TopDownGateSpawn":
                 player.transform.position = topDownGateSpawn.position;
+               
                 break;
             default:
                 Debug.Log("기본 위치에 스폰됩니다.");
                 break;
         }
-
         PlayerPrefs.DeleteKey("SpawnPointKey"); // 재사용 방지
     }
 }
