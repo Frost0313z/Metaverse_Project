@@ -1,61 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreBoardHandler : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI highScore_Flappy;
-    [SerializeField] private TextMeshProUGUI highScore_Stack;
-    [SerializeField] private TextMeshProUGUI highScore_TopDown;
+    [SerializeField] private Button okButton;
+    [SerializeField] private GameObject Exit_Win;
+    [SerializeField] private GameObject Exit_Lose;
 
-    public int bestScore_Flappy;
-    public int bestScore_Stack;
-    public int bestScore_TopDown;
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        FlappyScore();
-        StackScore();
-        TopDownScore();
-
-    }
-
-    public void FlappyScore()
-    {
-        bestScore_Flappy = ScoreManager.GetScore(MinigameType.Flappy);
-        highScore_Flappy.text = ScoreManager.GetScore(MinigameType.Flappy).ToString();
-
-        if(bestScore_Flappy > 30)
+        okButton.onClick.AddListener(() =>
         {
-            // 첫번째 감옥 문 열림
+            this.gameObject.SetActive(false);    
+            ShowResultUI();
+        });
+    }
+
+    private void ShowResultUI()
+    {
+        if (GameSceneManager.Instance == null)
+        {
+            Debug.LogWarning("GameSceneManager 인스턴스가 없습니다.");
+            return;
         }
-    }
 
-    public void StackScore()
-    {
-        bestScore_Stack = ScoreManager.GetScore(MinigameType.Stack);
-        highScore_Stack.text = ScoreManager.GetScore(MinigameType.Stack).ToString();
+        MinigameType type = GameSceneManager.Instance.CurrentMinigame;
 
-        if(bestScore_Stack > 40)
+        bool isWin = type switch
         {
-            // 두번째 감옥 문 열림
+            MinigameType.Flappy => ScoreBoardManager.IsWin_Flappy,
+            MinigameType.Stack => ScoreBoardManager.IsWin_Stack,
+            MinigameType.TopDown => ScoreBoardManager.IsWin_TopDown,
+            _ => false
+        };
+
+        if (isWin)
+        {
+            Exit_Win.SetActive(true);
+            Exit_Lose.SetActive(false);
         }
-    }
-
-    public void TopDownScore()
-    {
-        bestScore_TopDown = ScoreManager.GetScore(MinigameType.TopDown);
-        highScore_TopDown.text = ScoreManager.GetScore(MinigameType.TopDown).ToString();
-
-        if(bestScore_Stack > 20)
+        else
         {
-            // 세번째 감옥 문 열림
+            Exit_Win.SetActive(false);
+            Exit_Lose.SetActive(true);
         }
     }
 }

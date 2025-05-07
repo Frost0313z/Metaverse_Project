@@ -12537,6 +12537,7 @@ GameObject:
   - component: {fileID: 819413372}
   - component: {fileID: 819413371}
   - component: {fileID: 819413375}
+  - component: {fileID: 819413376}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -12647,9 +12648,32 @@ MonoBehaviour:
   highScore_Flappy: {fileID: 1031819913}
   highScore_Stack: {fileID: 218130171}
   highScore_TopDown: {fileID: 725107579}
+  ScoreBoard_Flappy: {fileID: 1593302457}
+  ScoreBoard_Stack: {fileID: 1971604477}
+  ScoreBoard_TopDown: {fileID: 1204227434}
+  TargetScore_Flappy: 30
+  TargetScore_Stack: 30
+  TargetScore_TopDown: 30
   bestScore_Flappy: 0
   bestScore_Stack: 0
   bestScore_TopDown: 0
+--- !u!114 &819413376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819413370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09fb261922293145948376bc4aa7bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Exit_Win: {fileID: 56405531}
+  Exit_Lose: {fileID: 276530174}
+  Exit_Win_okButton: {fileID: 453471725}
+  Exit_Lose_yesButton: {fileID: 897037554}
+  Exit_Lose_noButton: {fileID: 516680185}
 --- !u!1 &819526409
 GameObject:
   m_ObjectHideFlags: 0
@@ -20248,6 +20272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593302458}
+  - component: {fileID: 1593302459}
   m_Layer: 5
   m_Name: ScoreBoard_Flappy
   m_TagString: Untagged
@@ -20277,6 +20302,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1593302459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593302457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acef4886d9682344fa04d675a6b4fb7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  okButton: {fileID: 1226283412}
+  Exit_Win: {fileID: 56405531}
+  Exit_Lose: {fileID: 276530174}
 --- !u!1 &1593381772
 GameObject:
   m_ObjectHideFlags: 0
