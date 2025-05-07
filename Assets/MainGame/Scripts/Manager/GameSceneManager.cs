@@ -40,13 +40,6 @@ public class GameSceneManager : MonoBehaviour
             MinigameType.TopDown => "TopDownScene",
             _ => "MainGameScene"
         };
-
-        if(sceneName == "StackScene")
-        {
-            Screen.SetResolution(1080, 1920, false);
-            SceneManager.LoadScene(sceneName);
-        }
-        
         SceneManager.LoadScene(sceneName);
     }
 
