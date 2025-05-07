@@ -40,8 +40,8 @@ namespace MiniGame.Flappy
         public void AddScore(int score)
         {
             currentScore += score;
-            Debug.Log("Score: " + currentScore);
             uIManager.updatescore(currentScore);
+            ScoreManager.SaveScore(MinigameType.Flappy,currentScore);
         }
     }
 }
