@@ -41,6 +41,12 @@ public class GameSceneManager : MonoBehaviour
             _ => "MainGameScene"
         };
 
+        if(sceneName == "StackScene")
+        {
+            Screen.SetResolution(1080, 1920, false);
+            SceneManager.LoadScene(sceneName);
+        }
+        
         SceneManager.LoadScene(sceneName);
     }
 
