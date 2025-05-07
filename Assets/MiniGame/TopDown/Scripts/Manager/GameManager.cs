@@ -67,6 +67,7 @@ namespace MiniGame.TopDown
         public void GameOver()
         {
             enemyManager.StopWave();
+            PlayerPrefs.SetInt("TopDownScore", currentWaveIndex);
             uiManager.SetGameOver();
         }
     }

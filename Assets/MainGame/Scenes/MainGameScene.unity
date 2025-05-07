@@ -12667,7 +12667,7 @@ MonoBehaviour:
   ScoreBoard_TopDown: {fileID: 1204227434}
   TargetScore_Flappy: 30
   TargetScore_Stack: 30
-  TargetScore_TopDown: 30
+  TargetScore_TopDown: 20
   bestScore_Flappy: 0
   bestScore_Stack: 0
   bestScore_TopDown: 0

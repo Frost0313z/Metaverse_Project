@@ -24,7 +24,7 @@ namespace MiniGame.TopDown
 
         public void OnClickExitButton()
         {
-            Application.Quit();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainGameScene");
         }
 
         protected override UIState GetUIState()

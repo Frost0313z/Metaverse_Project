@@ -15,7 +15,7 @@ public class ScoreBoardManager : MonoBehaviour
     // 목표 점수 설정
     [SerializeField] private int TargetScore_Flappy = 30;
     [SerializeField] private int TargetScore_Stack = 30;
-    [SerializeField] private int TargetScore_TopDown = 30;
+    [SerializeField] private int TargetScore_TopDown = 20;
 
     public int bestScore_Flappy;
     public int bestScore_Stack;
