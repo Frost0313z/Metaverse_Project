@@ -59,11 +59,7 @@ namespace MiniGame.Stack
 
         public void OnClickExit()
         {
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainGameScene");
         }
 
         public void UpdateScore()

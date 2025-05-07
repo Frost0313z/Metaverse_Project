@@ -313,6 +313,7 @@ namespace MiniGame.Stack
 
                 PlayerPrefs.SetInt(BestScoreKey, bestScore);
                 PlayerPrefs.SetInt(BestComboKey, bestCombo);
+                PlayerPrefs.SetInt("StackScore", bestScore);
             }
         }
 

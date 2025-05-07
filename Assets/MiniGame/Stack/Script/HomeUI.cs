@@ -34,7 +34,7 @@ namespace MiniGame.Stack
 
         void OnClickExitButton()
         {
-            uIManager.OnClickExit();
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainGameScene");
         }
     }
 }
